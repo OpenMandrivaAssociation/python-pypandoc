@@ -19,8 +19,8 @@ BuildRequires:  texlive-collection-fontsrecommended
 
 BuildRequires:  python-devel
 BuildRequires:  python-setuptools
-Requires:       pandoc
-Requires:       pandoc-citeproc
+#Requires:       pandoc
+#Requires:       pandoc-citeproc
 Recommends:     texlive-scheme-basic
 Recommends:     texlive-collection-fontsrecommended
 %{?python_provide:%python_provide python-pypandoc}
