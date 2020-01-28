@@ -11,11 +11,11 @@ Source0:        https://files.pythonhosted.org/packages/source/p/pypandoc/pypand
 BuildArch:      noarch
 
 # for tests
-BuildRequires:  pandoc
-BuildRequires:  pandoc-citeproc
+#BuildRequires:  pandoc
+#BuildRequires:  pandoc-citeproc
 BuildRequires:  texlive-scheme-basic
 BuildRequires:  texlive-collection-fontsrecommended
-BuildRequires:  tex(ecrm1000.tfm)
+#BuildRequires:  tex(ecrm1000.tfm)
 
 BuildRequires:  python-devel
 BuildRequires:  python-setuptools
