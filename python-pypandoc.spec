@@ -1,7 +1,7 @@
 # Created by pyp2rpm-2.0.0
 
 Name:           python-pypandoc
-Version:        1.4
+Version:        1.5
 Release:        1
 Summary:        Thin wrapper for pandoc
 
