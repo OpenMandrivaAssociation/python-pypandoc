@@ -2,7 +2,7 @@
 
 Name:           python-pypandoc
 Version:        1.5
-Release:        1
+Release:        2
 Summary:        Thin wrapper for pandoc
 
 License:        MIT
@@ -65,4 +65,4 @@ sed -i -r 's/\b(test_convert_with_custom_writer|test_basic_conversion_from_file|
 %license LICENSE
 %doc README.md examples/
 %{python_sitelib}/pypandoc
-%{python_sitelib}/pypandoc-%{version}-py?.?.egg-info
+%{python_sitelib}/pypandoc-%{version}-py*.*.egg-info
