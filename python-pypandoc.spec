@@ -2,7 +2,7 @@
 
 Name:           python-pypandoc
 Version:        1.5
-Release:        4
+Release:        5
 Summary:        Thin wrapper for pandoc
 
 License:        MIT
