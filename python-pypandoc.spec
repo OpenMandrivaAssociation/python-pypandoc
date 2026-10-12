@@ -18,8 +18,8 @@ BuildRequires:  texlive-scheme-basic
 BuildRequires:  texlive-collection-fontsrecommended
 #BuildRequires:  tex(ecrm1000.tfm)
 
-BuildRequires:  python-devel
-BuildRequires:  python-setuptools
+BuildRequires:	python%{pyver}dist(pip)
+BuildRequires:	python%{pyver}dist(hatchling)
 #Requires:       pandoc
 #Requires:       pandoc-citeproc
 Recommends:     texlive-scheme-basic
@@ -34,10 +34,6 @@ pandoc-formatted text.
 
 %prep
 %autosetup -n pypandoc-%{version}
-
-# Upstream pins pip and wheel in install_requires, but they're not needed at runtime
-# https://github.com/bebraw/pypandoc/commit/c91c6d6fd23fb133a3676bce7af2a710ae7990d8
-sed -Ei -e "s/(, )?'pip>=[^']+'//" -e "s/(, )?'wheel>=[^']+'//" setup.py
 
 %build
 %py_build
@@ -64,6 +60,7 @@ sed -i -r 's/\b(test_convert_with_custom_writer|test_basic_conversion_from_file|
 
 %files
 %license LICENSE
-%doc README.md examples/
+%doc README.md
+%{_bindir}/pypandoc
 %{python_sitelib}/pypandoc
-%{python_sitelib}/pypandoc-%{version}-py*.*.egg-info
+%{python_sitelib}/pypandoc-%{version}.dist-info
