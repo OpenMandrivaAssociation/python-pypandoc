@@ -1,11 +1,12 @@
 # Created by pyp2rpm-2.0.0
 
 Name:           python-pypandoc
-Version:        1.5
-Release:        6
+Version:        1.17
+Release:        1
 Summary:        Thin wrapper for pandoc
 
 License:        MIT
+Group:        Development/Python
 URL:            https://github.com/bebraw/pypandoc
 Source0:        https://files.pythonhosted.org/packages/source/p/pypandoc/pypandoc-%{version}.tar.gz
 BuildArch:      noarch
