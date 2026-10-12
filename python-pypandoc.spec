@@ -41,21 +41,6 @@ pandoc-formatted text.
 %install
 %py_install
 
-%check
-# Old pandoc on EL7, no docx, no twiki
-%if 0%{?rhel} && 0%{?rhel} <= 7
-sed -i -e '/twiki/d' tests.py
-%endif
-
-# Disable test that requires network
-sed -i -r 's/test_basic_conversion_from_http_url/_disabled_\0/' tests.py
-
-# Disable tests where the rendering in pandoc-2 is different
-# https://github.com/bebraw/pypandoc/issues/149
-sed -i -r 's/\b(test_convert_with_custom_writer|test_basic_conversion_from_file|test_basic_conversion_from_file_with_format|test_basic_conversion_from_string|test_basic_conversion_to_file|test_conversion_from_markdown_with_extensions|test_conversion_from_non_plain_text_file|test_get_pandoc_version)\b/_disabled_\0/' tests.py
-
-#{__python} tests.py
-
 %global _docdir_fmt %{name}
 
 %files
